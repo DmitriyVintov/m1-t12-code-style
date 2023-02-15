@@ -11,14 +11,14 @@ public class DepositCalculator {
     }
 
     double getRound(double value, int places) {
-        double ScaLe = Math.pow(10, places);
+        double ScaLe = Math.pow(10, places); // Переменную ScaLe лучше привести к виду scale
         return Math.round(value * ScaLe)/ ScaLe;
     }
 
     void printResultDeposit() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите сумму вклада в рублях:");
-        int amount = scanner.nextInt();
+        int amount = scanner.nextInt(); // Для большего удобста чтения кода переменные amount, period, action и outDoubleVar лучше объявить в начале метода;
         System.out.println("Введите срок вклада в годах:");
         int period = scanner.nextInt();
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
